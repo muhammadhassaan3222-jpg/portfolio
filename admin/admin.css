@@ -1,0 +1,54 @@
+:root{--orr:255,106,31;--blr:47,123,255;--bgr:23,24,27;--bg:#17181b;--bg2:#1f2125;--tx:#f4f1ee;--mu:#a9a7a4;--or:#ff6a1f;--bl:#2f7bff;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0}[hidden]{display:none!important}
+body{background:var(--bg);color:var(--tx);font:400 15px/1.55 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em}
+button,input,select,textarea{font:inherit;color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.65rem 1.2rem;border-radius:999px;border:1px solid transparent;font-weight:700;cursor:pointer;text-decoration:none;transition:.2s;color:var(--tx);background:none}
+.btn.primary{background:var(--or);color:#16110d}.btn.primary:disabled{opacity:.4;cursor:default}.btn.primary:not(:disabled):hover{box-shadow:0 8px 24px -8px rgba(var(--orr),.8)}
+.btn.ghost{border-color:var(--line);background:rgba(255,255,255,.04)}.btn.ghost:hover{border-color:var(--bl)}
+.btn.danger,button.danger{color:#ff8a8a;border-color:rgba(255,93,93,.4)}
+.login{min-height:100svh;display:grid;place-items:center;padding:1rem}
+.lcard{width:min(400px,100%);padding:2rem;border-radius:24px;background:var(--bg2);border:1px solid var(--line);box-shadow:0 30px 80px -30px #000;display:grid;gap:1rem}
+.lcard h1{font-size:2rem}.lcard p{color:var(--mu)}.lcard label{display:grid;gap:.4rem;font-weight:700;font-size:.9rem}
+.lerr{color:#ff8a8a!important;min-height:1.2em}
+input,select,textarea{width:100%;min-height:46px;padding:.65rem .9rem;background:rgba(10,10,12,.45);border:1px solid var(--line);border-radius:12px;transition:.25s}
+textarea{min-height:90px;resize:vertical}option{background:#1f2125}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--bl);box-shadow:0 0 0 4px rgba(var(--blr),.16)}
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100svh}
+.side{position:sticky;top:0;height:100svh;overflow:auto;padding:1.2rem .8rem;border-right:1px solid var(--line);background:rgba(0,0,0,.2)}
+.side h1{font-size:1.3rem;padding:0 .8rem 1rem}
+.side button{display:block;width:100%;text-align:left;padding:.7rem .9rem;border:0;border-radius:12px;background:none;cursor:pointer;color:var(--mu);font-weight:500}
+.side button:hover{background:rgba(255,255,255,.05);color:var(--tx)}.side button.on{background:rgba(var(--orr),.16);color:var(--tx);font-weight:700}
+.side .sep{height:1px;background:var(--line);margin:.8rem .4rem}
+.main{padding:0 clamp(1rem,3vw,2.2rem) 4rem;min-width:0}
+.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1rem 0;background:linear-gradient(var(--bg) 80%,transparent)}
+.top h2{font-size:1.7rem}.tright{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}.dstat{color:var(--mu);font-size:.85rem}.dstat.dirty{color:#ffc46b}
+.warn{padding:.9rem 1.1rem;border-radius:14px;background:rgba(255,93,93,.12);border:1px solid rgba(255,93,93,.4);margin-bottom:1.2rem}
+.card{padding:1.4rem;border-radius:20px;background:var(--bg2);border:1px solid var(--line);margin-bottom:1.2rem}
+.card>h3{font-size:1.2rem;margin-bottom:1rem}.note{color:var(--mu);margin-bottom:1.2rem}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+.tile{text-align:left;padding:1.2rem;border-radius:18px;border:1px solid var(--line);background:var(--bg2);cursor:pointer;transition:.25s}
+.tile:hover{transform:translateY(-3px);border-color:var(--bl)}.tile b{display:block;font:700 1.1rem "Bricolage Grotesque",sans-serif;margin-bottom:.3rem}.tile span{color:var(--mu);font-size:.88rem}
+.f{margin-bottom:1rem}.f>label,.chk span{font-weight:700;font-size:.85rem}.f>label{display:block;margin-bottom:.35rem}
+.hint{display:block;color:var(--mu);font-size:.78rem;margin-top:.3rem}
+.chk{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;cursor:pointer}.chk input{width:20px;height:20px;min-height:0;accent-color:var(--or)}
+.grp{border:1px solid var(--line);border-radius:16px;padding:1rem 1rem .2rem;margin-bottom:1rem}.grp legend{padding:0 .5rem;font-weight:700;color:var(--or)}
+.item{border:1px solid var(--line);border-radius:14px;margin-bottom:.7rem;background:rgba(255,255,255,.02)}
+.item summary{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.7rem .9rem;cursor:pointer;font-weight:700;list-style:none}
+.item summary::-webkit-details-marker{display:none}.item summary>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.acts{display:flex;gap:.4rem;flex:none}
+.acts button,.mini{padding:.35rem .7rem;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);cursor:pointer;font-size:.8rem}
+.acts button:hover,.mini:hover{border-color:var(--bl)}.mini{margin-top:.2rem}
+.ibody{padding:.4rem 1rem 0}
+.srow{display:flex;gap:.5rem;margin-bottom:.5rem;align-items:flex-start}.srow button{flex:none;min-height:46px}
+.imgrow{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.prev{width:120px;height:120px;border-radius:14px;overflow:hidden;border:1px dashed var(--line);display:grid;place-items:center;color:var(--mu);font-size:.75rem;text-align:center;background:rgba(0,0,0,.25)}
+.prev img{width:100%;height:100%;object-fit:cover}.ibtns{display:flex;gap:.5rem;flex-wrap:wrap}
+.themes{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem}
+.theme{padding:1rem;border-radius:18px;border:2px solid var(--line);cursor:pointer;text-align:left;transition:.25s}
+.theme.on{border-color:var(--or)}.theme:hover{transform:translateY(-3px)}.theme b{display:block;margin:.7rem 0 .2rem}
+.sw{display:flex;height:54px;border-radius:12px;overflow:hidden}.sw i{flex:1}
+.pw{max-width:420px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;pointer-events:none;padding:.8rem 1.3rem;border-radius:999px;background:#2a2d33;border:1px solid var(--line);box-shadow:0 14px 40px -10px #000;transition:.3s;z-index:99;max-width:92vw;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}.toast.bad{border-color:#ff5d5d}
+@media(max-width:860px){.app{grid-template-columns:1fr}.side{position:static;height:auto;display:flex;gap:.3rem;overflow-x:auto;padding:.6rem;border-right:0;border-bottom:1px solid var(--line)}.side h1,.side .sep{display:none}.side button{width:auto;white-space:nowrap;flex:none}.top h2{font-size:1.3rem}}

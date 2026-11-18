@@ -1,0 +1,7 @@
+HOW TO PUT THIS WEBSITE ON YOUR HOSTING
+1. Log in to your hosting (cPanel) and open File Manager, then open the public_html folder.
+2. Click Upload and upload ugc-portfolio.zip, then right-click it and choose Extract.
+3. Move everything inside the extracted ugc-portfolio folder directly into public_html (index.html must sit directly in public_html).
+4. Website: yourdomain.com   Admin Panel: yourdomain.com/admin/
+5. First login: admin / Admin@123, then open Change Password and change it immediately.
+Your hosting needs PHP (almost all shared hosting has it) so Save updates the live site for every visitor.
